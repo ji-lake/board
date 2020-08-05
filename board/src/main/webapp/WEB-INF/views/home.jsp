@@ -11,5 +11,9 @@
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
+
+
+<a href="./board/write">글 작성</a>
+
 </body>
 </html>
