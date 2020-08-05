@@ -1,5 +1,7 @@
 package com.board.persistence;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
@@ -16,6 +18,12 @@ public class BoardDAOImpl implements BoardDAO{
 	
 	// 매퍼
 	private static String namespace = "com.board.mappers.boardMapper";
+	
+	// 게시물 목록
+	@Override
+	public List<BoardVO> list() throws Exception {
+		return sql.selectList(namespace + ".list");
+	}
 	
 	// 작성
 	@Override
@@ -43,5 +51,6 @@ public class BoardDAOImpl implements BoardDAO{
 		sql.delete(namespace + ".delete", bno);
 		
 	}
+
 
 }
