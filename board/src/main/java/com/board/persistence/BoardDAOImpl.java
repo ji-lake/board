@@ -40,8 +40,8 @@ public class BoardDAOImpl implements BoardDAO{
 
 	// 수정
 	@Override
-	public void update(BoardVO vo) throws Exception {
-		sql.update(namespace + ".update", vo);
+	public void modify(BoardVO vo) throws Exception {
+		sql.update(namespace + ".modify", vo);
 		
 	}
 

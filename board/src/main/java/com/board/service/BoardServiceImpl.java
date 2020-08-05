@@ -35,8 +35,8 @@ public class BoardServiceImpl implements BoardService {
 
 	// 수정
 	@Override
-	public void update(BoardVO vo) throws Exception {
-		dao.update(vo);		
+	public void modify(BoardVO vo) throws Exception {
+		dao.modify(vo);		
 	}
 
 	// 삭제

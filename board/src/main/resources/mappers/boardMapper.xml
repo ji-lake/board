@@ -26,8 +26,8 @@
 	 </select>
 	
 	 <!-- 수정 --> 
-	 <update id="update">
-	  update tbl_board
+	 <update id="modify">
+	  update db_lake.tbl_board
 	   set
 	    title = #{title},
 	    content = #{content}

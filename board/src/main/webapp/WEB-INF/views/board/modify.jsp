@@ -8,14 +8,10 @@
 
 <div id="root">
  <header>
-  <h1>lake 게시판</h1>
+  <h1>게시물 수정</h1>
  </header>
 
 <hr />
- 
- <nav>
-  처음화면 - 글쓰기 - 로그인
- </nav>
 
 <hr />
 
@@ -23,17 +19,16 @@
  
   <form role="form" method="post" autocomplete="off">
    <p>
-    <label for="title">글 제목</label><input type="text" id="title" name="title" value="${view.title}" />
+    <label for="title">글 제목</label><input type="text" id="title" name="title" value="${view.title}"  />
    </p>
    <p>
-    <label for="content">글 내용</label><input id="content" name="content" value="${view.content}" />
+    <label for="content">글 내용</label><input id="content" name="content" value="${view.title}" />
    </p>
    <p>
-    <label for="writer">작성자</label><input type="text" id="writer" name="writer" value="${view.writer}" />
+    <label for="writer">작성자</label><input type="text" id="writer" name="writer" value="${view.title}"  />
    </p>
    <p>
-   	<a href="../board/modify?bno=${view.bno}">게시물 수정</a>
-<!-- <button type="submit">작성</button> -->    
+    <button type="submit">완료</button>
    </p>  
   </form>
 
