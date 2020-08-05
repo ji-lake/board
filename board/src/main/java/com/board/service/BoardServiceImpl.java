@@ -29,8 +29,8 @@ public class BoardServiceImpl implements BoardService {
 
 	// 조회
 	@Override
-	public BoardVO read(int bno) throws Exception {
-		return dao.read(bno);
+	public BoardVO view(int bno) throws Exception {
+		return dao.view(bno);
 	}
 
 	// 수정

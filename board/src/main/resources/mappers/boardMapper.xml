@@ -19,9 +19,9 @@
 	</insert>
 	 
 	 <!-- 조회 -->
-	 <select id="read" resultType="com.board.domain.BoardVO">
+	 <select id="view" parameterType="int" resultType="com.board.domain.BoardVO">
 	  select bno, title, content, writer, regDate, viewCnt
-	   from tbl_board
+	   from db_lake.tbl_board
 	    where bno = #{bno}
 	 </select>
 	
