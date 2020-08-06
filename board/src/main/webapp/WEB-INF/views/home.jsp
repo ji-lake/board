@@ -14,7 +14,13 @@
 
 
 <a href="./board/list">게시물 목록</a>
-<a href="./board/write">게시물 작성</a>
+<a href="./board/write">게시물 작성</a><br><br>
+
+<label>아이디 : </label><input type=text name="id" id="id" placeholder="아이디" /><br>
+<label>비밀번호 : </label><input name="pw" id="pw" placeholder="비밀번호" /><br><br>
+
+<input type=button value="로그인" />
+<a href="./board/join"><input type=button value="회원가입" /></a>
 
 </body>
 </html>
