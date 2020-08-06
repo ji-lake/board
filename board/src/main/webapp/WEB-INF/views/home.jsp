@@ -20,7 +20,7 @@
 <label>비밀번호 : </label><input name="pw" id="pw" placeholder="비밀번호" /><br><br>
 
 <input type=button value="로그인" />
-<a href="./board/join"><input type=button value="회원가입" /></a>
+<a href="./member/join"><input type=button value="회원가입" /></a>
 
 </body>
 </html>

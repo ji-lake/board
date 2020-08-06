@@ -22,13 +22,13 @@ public class BoardController {
 	private static final Logger logger = LoggerFactory.getLogger(BoardController.class);
 	
 		@Inject
-		BoardService service;
+		BoardService BService;
 		
 		// 게시물 목록
 		@RequestMapping(value = "/list", method = RequestMethod.GET)
 		public void getList(Model model) throws Exception {
 			
-			List<BoardVO> list = null; list = service.list();
+			List<BoardVO> list = null; list = BService.list();
 			model.addAttribute("list",list);
 		}
 		// 글 작성 get
@@ -42,7 +42,7 @@ public class BoardController {
 		public String postWrite(BoardVO vo) throws Exception {
 			logger.info("________________글 작성이 완료되었습니다________________");
 			
-			service.write(vo);
+			BService.write(vo);
 			
 			return "redirect:/";
 		}
@@ -51,7 +51,7 @@ public class BoardController {
 		@RequestMapping(value = "/view", method = RequestMethod.GET)
 		public void getView(@RequestParam("bno") int bno, Model model) throws Exception {
 			
-			BoardVO vo = service.view(bno);
+			BoardVO vo = BService.view(bno);
 			
 			model.addAttribute("view", vo);
 		}
@@ -61,7 +61,7 @@ public class BoardController {
 		public void getModify(@RequestParam("bno") int bno, Model model) throws Exception {
 			logger.info("______________수정 할겁니다_____________");
 			
-			BoardVO vo = service.view(bno);
+			BoardVO vo = BService.view(bno);
 			
 			model.addAttribute("view", vo);
 
@@ -72,7 +72,7 @@ public class BoardController {
 		public String postModify(BoardVO vo) throws Exception {			
 			logger.info("______________수정 완료_____________");
 			
-			service.modify(vo);
+			BService.modify(vo);
 			
 			return "redirect:/board/view?bno=" + vo.getBno();
 			
