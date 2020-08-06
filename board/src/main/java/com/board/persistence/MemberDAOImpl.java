@@ -17,10 +17,17 @@ public class MemberDAOImpl implements MemberDAO {
 	// 매퍼
 	private static String namespace = "com.board.mappers.memberMapper";
 	
+	// 회원가입
 	@Override
 	public void join(MemberVO vo) throws Exception {
 		sql.insert(namespace + ".join", vo);
 		
+	}
+
+	// 로그인
+	@Override
+	public MemberVO login(MemberVO vo) throws Exception {
+		return sql.selectOne(namespace + ".login", vo);
 	}
 
 }
