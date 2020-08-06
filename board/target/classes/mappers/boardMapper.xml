@@ -30,14 +30,15 @@
 	  update db_lake.tbl_board
 	   set
 	    title = #{title},
-	    content = #{content}
+	    content = #{content},
+	    writer = #{writer}
 	   where bno = #{bno}  
 	 </update>
 	 
 	 <!-- 삭제 -->
 	 <delete id="delete">
 	  delete from
-	   tbl_board
+	   db_lake.tbl_board
 	  where bno = #{bno}
 	 </delete>
 

@@ -22,10 +22,10 @@
     <label for="title">글 제목</label><input type="text" id="title" name="title" value="${view.title}"  />
    </p>
    <p>
-    <label for="content">글 내용</label><input id="content" name="content" value="${view.title}" />
+    <label for="content">글 내용</label><input id="content" name="content" value="${view.content}" />
    </p>
    <p>
-    <label for="writer">작성자</label><input type="text" id="writer" name="writer" value="${view.title}"  />
+    <label for="writer">작성자</label><input type="text" id="writer" name="writer" value="${view.writer}"  />
    </p>
    <p>
     <button type="submit">완료</button>

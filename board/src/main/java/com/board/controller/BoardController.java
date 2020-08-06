@@ -59,6 +59,7 @@ public class BoardController {
 		// 게시물 수정
 		@RequestMapping(value = "/modify", method = RequestMethod.GET)
 		public void getModify(@RequestParam("bno") int bno, Model model) throws Exception {
+			logger.info("______________수정 할겁니다_____________");
 			
 			BoardVO vo = service.view(bno);
 			
@@ -68,7 +69,8 @@ public class BoardController {
 		
 		// 게시물 수정
 		@RequestMapping(value = "/modify", method = RequestMethod.POST)
-		public String postModify(BoardVO vo) throws Exception {
+		public String postModify(BoardVO vo) throws Exception {			
+			logger.info("______________수정 완료_____________");
 			
 			service.modify(vo);
 			
