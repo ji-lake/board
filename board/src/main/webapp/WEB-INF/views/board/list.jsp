@@ -8,6 +8,14 @@
 </head>
 <body>
 
+	<header>
+		<%@include file="include/header.jsp" %>
+	</header>
+	<hr />
+	<nav>
+		<%@include file="include/nav.jsp" %>
+	</nav>
+
 <table>
  <thead>
   <tr>
@@ -26,8 +34,7 @@
   <td>${list.bno}</td>
   <td>
     <a href="../board/view?bno=${list.bno}">${list.title}</a>
-</td>
-  <td>${list.title}</td>
+  </td>
   <td>${list.regDate}</td>
   <td>${list.writer}</td>
   <td>${list.viewCnt}</td>
@@ -36,5 +43,10 @@
   
  </tbody>
 </table>
+<hr />
+	<footer>
+		<%@include file="include/footer.jsp" %>
+	</footer>
+
 </body>
 </html>

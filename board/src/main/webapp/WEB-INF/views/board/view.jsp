@@ -7,15 +7,13 @@
 <body>
 
 <div id="root">
- <header>
-  <h1>lake 게시판</h1>
- </header>
-
-<hr />
- 
- <nav>
-  처음화면 - 글쓰기 - 로그인
- </nav>
+<header>
+		<%@include file="include/header.jsp" %>
+	</header>
+	<hr />
+	<nav>
+		<%@include file="include/nav.jsp" %>
+	</nav>
 
 <hr />
 
@@ -34,18 +32,17 @@
    <p>
    	<a href="../board/modify?bno=${view.bno}">게시물 수정</a>
    	<a href="../board/list">리스트로 되돌아가기</a>
-   	<a href="../home">홈화면(시계)</a>
+   	<a href="../">홈화면(시계)</a>
 <!-- <button type="submit">작성</button> -->    
    </p>  
   </form>
 
  </section>
-
+ 
 <hr />
-
- <footer>
-  <p>만든이 : lake</p>  
- </footer>
+	<footer>
+		<%@include file="include/footer.jsp" %>
+	</footer>
 
 </div>
 

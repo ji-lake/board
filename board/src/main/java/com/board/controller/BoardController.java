@@ -3,6 +3,7 @@ package com.board.controller;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,13 +29,20 @@ public class BoardController {
 		@RequestMapping(value = "/list", method = RequestMethod.GET)
 		public void getList(Model model) throws Exception {
 			
-			List<BoardVO> list = null; list = BService.list();
+			List<BoardVO> list = null; 
+			list = BService.list();
 			model.addAttribute("list",list);
 		}
 		// 글 작성 get
 		@RequestMapping(value = "/write", method = RequestMethod.GET)
-		public void getWrite() throws Exception {
+		public void getWrite(HttpSession session, Model model) throws Exception {
 			logger.info("________________글을 작성할겁니다________________");
+			
+			Object loginInfo = session.getAttribute("member");
+			
+			if(loginInfo == null) {
+				model.addAttribute("msg",false);
+			}
 		}
 		
 		// 글 작성 post

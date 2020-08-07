@@ -8,7 +8,7 @@
 	<select id="list" resultType="com.board.domain.BoardVO">
 		select
 			bno,title,content,writer,regDate,viewCnt
-		from db_lake.tbl_board
+		from db_lake.tbl_board order by bno desc
 	</select>
 
 	<!-- 작성 -->

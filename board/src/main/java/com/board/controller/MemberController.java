@@ -64,5 +64,15 @@ public class MemberController {
 		
 		return "redirect:/";
 	}
+	
+	// 로그아웃
+	@RequestMapping(value = "/logout", method = RequestMethod.GET)
+	public String logout(HttpSession session) throws Exception {
+		logger.info("______________로그아웃_______________");
+		
+		session.invalidate();
+		
+		return "redirect:/";
+	}
 
 }

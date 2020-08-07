@@ -31,7 +31,7 @@
 
 <c:if test="${member != null}">
 	<p>${member.userName}님 환영합니다.</p>
-	<a href="/member/logout"><input type="button" value="로그아웃"></a>
+	<a href="member/logout"><input type="button" value="로그아웃"></a>
 </c:if>
 
 
