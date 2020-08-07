@@ -29,7 +29,7 @@
     <label for="content">글 내용</label><textarea id="content" name="content"></textarea>
    </p>
    <p>
-    <label for="writer">작성자</label><input type="text" id="writer" name="writer" />
+    <label for="writer">작성자</label><input type="text" id="writer" name="writer" value="${member.userName}" readonly/>
    </p>
    <p>
     <button type="submit">작성</button>

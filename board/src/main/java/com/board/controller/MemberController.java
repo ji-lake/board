@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.board.domain.MemberVO;
 import com.board.service.MemberService;
@@ -41,7 +42,7 @@ public class MemberController {
 	
 	// 로그인
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String login(MemberVO vo, HttpServletRequest req) throws Exception {
+	public String login(MemberVO vo, HttpServletRequest req, RedirectAttributes rttr) throws Exception {
 		logger.info("__________로그인 go__________");
 		
 		HttpSession session = req.getSession();
@@ -50,8 +51,15 @@ public class MemberController {
 		
 		if(login == null) {
 			session.setAttribute("member", null);
+			rttr.addFlashAttribute("msg", false);
 		} else {
 			session.setAttribute("member", login);
+			logger.info("아이디 : " + vo.getUserId());
+			logger.info("비밀번호 : " + vo.getUserPass());
+			logger.info("이름 : " + vo.getUserName());
+			logger.info("아이디22222 : " + login.getUserId());
+			logger.info("비밀번호222222 : " + login.getUserPass());
+			logger.info("이름2222222 : " + login.getUserName());
 		}
 		
 		return "redirect:/";
