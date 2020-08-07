@@ -86,4 +86,15 @@ public class BoardController {
 			
 		}
 		
+		// 게시물 삭제
+		@RequestMapping(value = "/delete", method = RequestMethod.GET)
+		public String getDelete(@RequestParam("bno") int bno) throws Exception {
+		  
+			BService.delete(bno);  
+
+			return "redirect:/board/list";
+		 
+		}
+		
+		
 }

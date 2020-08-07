@@ -1,5 +1,6 @@
 package com.board.persistence;
 
+import java.util.HashMap;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import com.board.domain.BoardVO;
 
 @Repository
-public class BoardDAOImpl implements BoardDAO{
+public class BoardDAOImpl implements BoardDAO {
 
 	// 마이바티스
 	@Inject
@@ -51,6 +52,5 @@ public class BoardDAOImpl implements BoardDAO{
 		sql.delete(namespace + ".delete", bno);
 		
 	}
-
-
 }
+	

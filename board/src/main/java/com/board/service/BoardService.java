@@ -20,5 +20,5 @@ public interface BoardService {
 	
 	// 삭제
 	public void delete(int bno) throws Exception;
-
+	
 }

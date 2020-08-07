@@ -41,5 +41,6 @@
 	   db_lake.tbl_board
 	  where bno = #{bno}
 	 </delete>
+	 
 
 </mapper>

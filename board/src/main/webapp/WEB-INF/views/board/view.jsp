@@ -30,8 +30,9 @@
     <label for="writer">작성자</label> : ${view.writer}
    </p>
    <p>
-   	<a href="../board/modify?bno=${view.bno}">게시물 수정</a>
-   	<a href="../board/list">리스트로 되돌아가기</a>
+   	<a href="/board/modify?bno=${view.bno}">게시물 수정</a>
+   	<a href="/board/delete?bno=${view.bno}">게시물 삭제</a>
+   	<a href="/board/list">리스트로 되돌아가기</a>
    	<a href="../">홈화면(시계)</a>
 <!-- <button type="submit">작성</button> -->    
    </p>  

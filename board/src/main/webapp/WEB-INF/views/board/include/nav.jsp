@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+
 <p>HOME - 글쓰기 - 로그인</p>
 </body>
 </html>

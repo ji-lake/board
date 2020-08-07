@@ -21,4 +21,5 @@ public interface BoardDAO {
 	// 삭제
 	public void delete(int bno) throws Exception;
 
+	
 }
